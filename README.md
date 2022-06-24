@@ -8,10 +8,28 @@ From:
 <div class="foo bar baz"></div>
 ```
 
+```css
+.foo.bar {
+    color:red;
+}
+.baz {
+    opacity:0;
+}
+```
+
 To:
 
 ```html
 <div class="a b c"></div>
+```
+
+```css
+.a.b {
+    color:red;
+}
+.c {
+    opacity:0;
+}
 ```
 
 ## Getting Started
