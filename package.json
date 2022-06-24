@@ -1,0 +1,8 @@
+{
+	"dependencies": {
+		"cheerio": "1.0.0-rc.11",
+		"css-tree": "^2.1.0"
+	},
+	"type": "module",
+	"private": true
+}
