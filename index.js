@@ -1,7 +1,7 @@
 import * as csstree from "css-tree";
 import { load } from "cheerio";
 
-function minify(css, html) {
+function minify(css, html, root = false) {
 	const CSS = css;
 	const $ = load(html);
 
@@ -35,7 +35,7 @@ function minify(css, html) {
 			.replaceAll("\\2c", ",")
 			.replaceAll(" ", "")
 			.replace(/\\([^ ])/g, "$1");
-			
+
 		return unescaped;
 	}
 
@@ -62,16 +62,16 @@ function minify(css, html) {
 			if (className.trim() in replacedClasses) {
 				return replacedClasses[className];
 			}
-			
+
 			return className;
 		});
 
-		$(el).attr("class", classes.join(" "));
+		if (classes.length) $(el).attr("class", classes.join(" "));
 	});
 
 	return {
 		css: csstree.generate(CSSast),
-		html: $("body").html(),
+		html: root ? $.root().html() : $("body").html(),
 		replacedClasses,
 	};
 }

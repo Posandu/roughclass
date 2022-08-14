@@ -1,6 +1,6 @@
 {
 	"name": "@posandu/roughclass",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Minify CSS classes",
 	"main": "index.js",
 	"dependencies": {
@@ -18,8 +18,8 @@
 	],
 	"author": "posandu",
 	"license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Posandu/roughclass.git"
-  }
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Posandu/roughclass.git"
+	}
 }

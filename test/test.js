@@ -1,4 +1,4 @@
-import minify from "../minifier.js";
+import minify from "../index.js";
 import fs from "fs";
 
 const html = `
