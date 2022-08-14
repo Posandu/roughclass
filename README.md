@@ -1,6 +1,6 @@
-## HTML Classes minifier
+## @posandu/roughclass
 
-This node script minifies classnames in HTML files.
+This npm library minifies classnames in HTML files.
 
 From:
 
@@ -10,10 +10,10 @@ From:
 
 ```css
 .foo.bar {
-    color:red;
+	color: red;
 }
 .baz {
-    opacity:0;
+	opacity: 0;
 }
 ```
 
@@ -25,19 +25,19 @@ To:
 
 ```css
 .a.b {
-    color:red;
+	color: red;
 }
 .c {
-    opacity:0;
+	opacity: 0;
 }
 ```
 
 ## Getting Started
 
-Clone the repository. Install dependencies. Import `minifier.js` into your project.
+Install using `npm i @posandu/roughclass`.
 
 ```js
-const minify = require("minifier.js");
+const minify = require("@posandu/roughclass");
 ```
 
 ## Usage
