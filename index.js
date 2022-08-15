@@ -10,20 +10,9 @@ function minify(css, html, root = false) {
 	const nanoid = () => {
 		id++;
 
-		const map = {
-			0: "_",
-			1: "_a",
-			2: "_b",
-			3: "_c",
-			4: "_d",
-			5: "_e",
-			6: "_f",
-			7: "_g",
-			8: "_h",
-			9: "_i",
-		};
+		const text = id.toString(36);
 
-		return id.toString(36).replace(/[0-9]/g, (c) => map[c]);
+		return text[0].match(/[a-z]/) ? text : `_${text}`;
 	};
 
 	const CSSast = csstree.parse(CSS);
